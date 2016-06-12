@@ -2,7 +2,7 @@ var GirlDancer = function(top, left, timeBetweenSteps){
   //var blinkyDancer = new makeDancer(top, left, timeBetweenSteps);
 
   Dancer.call(this,top, left, timeBetweenSteps);
-
+  this.$node.css("border", "none", "border-radius", "inherit");
   //makeDancer.call(this,top, left, timeBetweenSteps);
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -10,7 +10,7 @@ var GirlDancer = function(top, left, timeBetweenSteps){
   this.bol = true;
 };
 
-GirlDancer.prototype = Object.create(makeDancer.prototype);
+GirlDancer.prototype = Object.create(Dancer.prototype);
 GirlDancer.prototype.constructor = GirlDancer;
 
 GirlDancer.prototype.step = function(){
